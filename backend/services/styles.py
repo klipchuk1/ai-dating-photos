@@ -226,7 +226,9 @@ def get_styles() -> list[Style]:
 def get_prompt(style_id: str) -> tuple[str, str]:
     """
     Return (prompt, negative_prompt) for the given style_id.
+    Source of truth is models.styles.STYLES (the UI-facing catalog).
     Raises KeyError for unknown IDs.
     """
-    style = STYLES[style_id]
+    from models.styles import STYLES as UI_STYLES
+    style = UI_STYLES[style_id]
     return style["prompt"], style["negative_prompt"]
