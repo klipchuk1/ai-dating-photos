@@ -14,7 +14,7 @@ import replicate
 # ─── Model versions ────────────────────────────────────────────────────────────
 # Pin versions for reproducibility — update when new stable versions release.
 
-INSTANTID_VERSION = "491ddf5be6b827f8931f088ef10c6d015f6d99d5"
+INSTANTID_VERSION = "2e4785a4d80dadf580077b2244c8d7c05d8e3faac04a04c02d8e099dd2876789"
 # InstantID: face conditioning → outputs conditioned latent fed into SDXL
 
 SDXL_VERSION = "7762fd07cf82c948538e41f63f77d685e02b063e"

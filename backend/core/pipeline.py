@@ -18,7 +18,7 @@ from models.styles import STYLES
 from core.storage import user_result_dir
 
 # ── Pinned model versions ──────────────────────────────────────────────────────
-_INSTANTID  = "zsxkib/instant-id:491ddf5be6b827f8931f088ef10c6d015f6d99d5"
+_INSTANTID  = "zsxkib/instant-id:2e4785a4d80dadf580077b2244c8d7c05d8e3faac04a04c02d8e099dd2876789"
 _CODEFORMER = "sczhou/codeformer:7de2ea26c616d5bf2245ad0d5e24f0ff9a6204578"
 _REALESRGAN = "nightmareai/real-esrgan:42fed1c4974146d4d2414e2be2c5277c7fcf05faf03a2905d4c5b5b4a4b8b49b"
 
