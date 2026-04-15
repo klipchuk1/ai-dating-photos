@@ -18,7 +18,7 @@ onnxruntime==1.18.0          # CPU inference
 
 # Face similarity fallback (if insightface unavailable)
 deepface==0.0.93
-# tensorflow-cpu==2.16.1     # lighter TF build for deepface
+tf-keras                     # required by deepface with TF 2.17+
 
 # Computer vision (face selection + histogram fallback)
 opencv-python-headless==4.9.0.80
