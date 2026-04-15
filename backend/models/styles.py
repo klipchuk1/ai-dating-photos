@@ -9,7 +9,7 @@ STYLES: dict = {
         "id": "outdoor_golden",
         "name": "Золотой час",
         "description": "Улица, теплый закатный свет, живые цвета",
-        "preview_url": "/previews/outdoor_golden.jpg",
+        "preview_url": "https://images.unsplash.com/photo-1502323777036-f29e3972d82f?w=720&q=80",
         "prompt": (
             "professional dating photo, warm golden hour sunlight, "
             "outdoor urban background, shallow depth of field, "
@@ -27,7 +27,7 @@ STYLES: dict = {
         "id": "cafe_vibes",
         "name": "Кофе в кафе",
         "description": "Уютная кофейня, мягкий свет, lifestyle",
-        "preview_url": "/previews/cafe_vibes.jpg",
+        "preview_url": "https://images.unsplash.com/photo-1511920170033-f8396924c348?w=720&q=80",
         "prompt": (
             "professional lifestyle photo, cozy cafe interior, "
             "soft window light, coffee cup, warm ambient lighting, "
@@ -44,7 +44,7 @@ STYLES: dict = {
         "id": "city_night",
         "name": "Ночной город",
         "description": "Ночные огни, боке, атмосфера",
-        "preview_url": "/previews/city_night.jpg",
+        "preview_url": "https://images.unsplash.com/photo-1519501025264-65ba15a82390?w=720&q=80",
         "prompt": (
             "professional portrait photo, nighttime city street, "
             "bokeh city lights background, neon reflections, "
@@ -61,7 +61,7 @@ STYLES: dict = {
         "id": "nature_fresh",
         "name": "На природе",
         "description": "Парк, зелень, естественный свет",
-        "preview_url": "/previews/nature_fresh.jpg",
+        "preview_url": "https://images.unsplash.com/photo-1504593811423-6dd665756598?w=720&q=80",
         "prompt": (
             "professional outdoor portrait, lush green park, "
             "dappled sunlight through trees, fresh natural look, "
@@ -78,7 +78,7 @@ STYLES: dict = {
         "id": "rooftop_view",
         "name": "Крыша города",
         "description": "Крыша, горизонт, premium feeling",
-        "preview_url": "/previews/rooftop_view.jpg",
+        "preview_url": "https://images.unsplash.com/photo-1485872299712-3d6b4f1d6d3c?w=720&q=80",
         "prompt": (
             "premium lifestyle photo, rooftop terrace, "
             "city skyline background, daytime, confident pose, "
@@ -95,7 +95,7 @@ STYLES: dict = {
         "id": "studio_clean",
         "name": "Студия",
         "description": "Белый фон, профессиональный свет, чистота",
-        "preview_url": "/previews/studio_clean.jpg",
+        "preview_url": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=720&q=80",
         "prompt": (
             "professional studio portrait, clean white background, "
             "professional three-point lighting, sharp and clear, "
@@ -112,7 +112,7 @@ STYLES: dict = {
         "id": "beach_summer",
         "name": "Пляж",
         "description": "Море, лето, солнце и свобода",
-        "preview_url": "/previews/beach_summer.jpg",
+        "preview_url": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=720&q=80",
         "prompt": (
             "candid beach portrait, sunny day, ocean background, "
             "warm summer light, relaxed happy expression, "
@@ -129,7 +129,7 @@ STYLES: dict = {
         "id": "business_casual",
         "name": "Деловой стиль",
         "description": "Smart casual, уверенность, взрослый взгляд",
-        "preview_url": "/previews/business_casual.jpg",
+        "preview_url": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=720&q=80",
         "prompt": (
             "professional business casual portrait, modern office "
             "or city background, confident relaxed pose, "
