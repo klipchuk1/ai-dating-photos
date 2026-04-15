@@ -20,10 +20,10 @@ INSTANTID_VERSION = "2e4785a4d80dadf580077b2244c8d7c05d8e3faac04a04c02d8e099dd28
 SDXL_VERSION = "7762fd07cf82c948538e41f63f77d685e02b063e"
 # SDXL: base generation guided by InstantID face embedding
 
-CODEFORMER_VERSION = "7de2ea26c616d5bf2245ad0d5e24f0ff9a6204578"
+CODEFORMER_VERSION = "cc4956dd26fa5a7185d5660cc9100fab1b8070a1d1654a8bb5eb6d443b020bb2"
 # CodeFormer: face restoration — sharpens identity details post-generation
 
-REALESRGAN_VERSION = "42fed1c4974146d4d2414e2be2c5277c7fcf05faf03a2905d4c5b5b4a4b8b49b"
+REALESRGAN_VERSION = "b3ef194191d13140337468c916c2c5b96dd0cb06dffc032a022a31807f6a5ea8"
 # Real-ESRGAN: 2x / 4x upscale preserving texture
 
 
