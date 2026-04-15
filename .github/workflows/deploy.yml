@@ -5,6 +5,7 @@ on:
     branches: [master, main]
 
 jobs:
+  # ── Frontend → Vercel ──────────────────────────────────────────────────────
   frontend:
     name: Frontend → Vercel
     runs-on: ubuntu-latest
@@ -27,14 +28,27 @@ jobs:
           VERCEL_ORG_ID:     ${{ secrets.VERCEL_ORG_ID }}
           VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
 
+  # ── Backend → VPS (SSH redeploy) ───────────────────────────────────────────
   backend:
-    name: Backend → Railway
+    name: Backend → VPS
     runs-on: ubuntu-latest
-    continue-on-error: true
     steps:
-      - uses: actions/checkout@v4
-      - run: npm install -g @railway/cli
-      - name: Deploy
-        run: railway up --service backend --detach
-        env:
-          RAILWAY_TOKEN: ${{ secrets.RAILWAY_TOKEN }}
+      - name: Deploy via SSH
+        uses: appleboy/ssh-action@v1.0.3
+        with:
+          host:     ${{ secrets.SSH_HOST }}
+          username: ${{ secrets.SSH_USER }}
+          key:      ${{ secrets.SSH_KEY }}
+          script: |
+            cd /opt/app
+            git pull origin master
+            docker build -t ai-dating-backend ./backend
+            docker rm -f ai-dating-backend || true
+            docker run -d \
+              --name ai-dating-backend \
+              --restart unless-stopped \
+              -p 127.0.0.1:8000:8000 \
+              --env-file /opt/app/backend/.env \
+              -v /opt/app/backend/storage:/app/storage \
+              ai-dating-backend
+            echo "Backend redeployed OK"
