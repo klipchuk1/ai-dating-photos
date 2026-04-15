@@ -16,9 +16,8 @@ insightface==0.7.3
 onnxruntime==1.18.0          # CPU inference
 # onnxruntime-gpu==1.18.0    # swap for GPU
 
-# Face similarity fallback (if insightface unavailable)
-deepface==0.0.93
-tf-keras                     # required by deepface with TF 2.17+
+# Face similarity fallback: OpenCV histogram only (deepface removed — too heavy,
+# pulls TensorFlow ~2GB. insightface is primary; histogram is enough as fallback.)
 
 # Computer vision (face selection + histogram fallback)
 opencv-python-headless==4.9.0.80

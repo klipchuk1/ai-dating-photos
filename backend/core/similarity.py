@@ -18,11 +18,11 @@ from typing import Optional
 
 logger = logging.getLogger(__name__)
 
-# ── DeepFace (primary) ─────────────────────────────────────────────────────────
+# ── DeepFace (optional; heavy TF dep — catch all errors, not just ImportError) ──
 try:
     from deepface import DeepFace as _DF
     _DEEPFACE = True
-except ImportError:
+except Exception:
     _DEEPFACE = False
 
 # ── OpenCV (fallback) ──────────────────────────────────────────────────────────
