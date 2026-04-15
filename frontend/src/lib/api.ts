@@ -6,6 +6,18 @@ const BASE = import.meta.env.VITE_API_URL ?? "/api";
 
 const api = axios.create({ baseURL: BASE });
 
+// Backend returns photo URLs as relative paths like "/results/<user>/<file>.jpg".
+// The browser would resolve those against the Vercel origin → 404.
+// Rewrite them to absolute URLs pointing at the backend.
+const STATIC_ORIGIN = BASE.startsWith("http") ? BASE.replace(/\/$/, "") : "";
+
+const absolutize = (url: string): string => {
+  if (!url) return url;
+  if (url.startsWith("http://") || url.startsWith("https://")) return url;
+  if (url.startsWith("/")) return `${STATIC_ORIGIN}${url}`;
+  return url;
+};
+
 // ── Types ──────────────────────────────────────────────────────────────────────
 
 export interface StyleOption {
@@ -71,5 +83,11 @@ export const pollJobStatus = async (job_id: string): Promise<JobStatusResponse> 
 
 export const getResult = async (job_id: string): Promise<ResultResponse> => {
   const { data } = await api.get<ResultResponse>(`/result/${job_id}`);
-  return data;
+  return {
+    ...data,
+    photos: data.photos.map((p) => ({ ...p, url: absolutize(p.url) })),
+    top_photo: data.top_photo
+      ? { ...data.top_photo, url: absolutize(data.top_photo.url) }
+      : null,
+  };
 };
